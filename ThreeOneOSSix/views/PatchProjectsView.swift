@@ -200,7 +200,7 @@ struct PatchProjectsView: View {
                 FileDocumentPicker(
                     allowedContentTypes: PatchPackagePickerPolicy.allowedContentTypes,
                     copiesSelectedDocument: PatchPackagePickerPolicy.copiesSelectedDocument,
-                    allowsMultipleSelection: false,
+                    allowsMultipleSelection: true,
                     onSelection: { result in
                         showImporter = false
                         if case .success(let urls) = result, let url = urls.first {
