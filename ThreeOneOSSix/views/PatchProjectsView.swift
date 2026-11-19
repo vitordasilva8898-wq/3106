@@ -202,7 +202,7 @@ struct PatchProjectsView: View {
                     copiesSelectedDocument: PatchPackagePickerPolicy.copiesSelectedDocument,
                     allowsMultipleSelection: true,
                     onSelection: { result in
-                        showImporter = false
+                        showImporter = true
                         if case .success(let urls) = result, let url = urls.first {
                             store.importPackage(at: url)
                         }
